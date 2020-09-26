@@ -1,12 +1,14 @@
-import express, { Request, Response } from 'express';
-import routes from './routes';
+import 'reflect-metadata';
 
+import express from 'express';
+import routes from './routes/index';
+
+import './database';
+
+const port = 3333;
 const app = express();
 
-app.get('/', (request: Request, response: Response) => {
-  return response.json({ message: 'Hello world' });
-});
+app.use(express.json());
+app.use(routes);
 
-app.listen(3333, () => {
-  console.log('Funcionou');
-});
+app.listen(port, () => console.log('online'));
