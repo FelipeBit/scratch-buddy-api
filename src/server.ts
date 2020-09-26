@@ -9,6 +9,7 @@ const port = 3333;
 const app = express();
 
 app.use(express.json());
+app.use(express.static(`${__dirname}/public`));
 app.use(routes);
 
 app.listen(port, () => console.log('online'));
