@@ -19,7 +19,7 @@ export default class CreateBlock1600900669152 implements MigrationInterface {
             generationStrategy: 'increment',
           },
           {
-            name: 'description',
+            name: 'opcode',
             type: 'varchar',
             isNullable: false,
           },

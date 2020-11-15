@@ -7,24 +7,24 @@ enum EnumCategory {
   messageImage = 'message_image',
 }
 
-@Entity('file')
+@Entity({ name: 'file' })
 class File {
   @PrimaryGeneratedColumn('increment')
   id: number;
 
-  @Column('varchar')
+  @Column({ name: 'name', type: 'varchar' })
   name: string;
 
-  @Column('varchar')
+  @Column({ name: 'path', type: 'varchar' })
   path: string;
 
-  @Column('varchar')
+  @Column({ name: 'type', type: 'varchar' })
   type: string;
 
-  @Column('text')
+  @Column({ name: 'file_category', type: 'text', default: 'tip_image' })
   fileCategory: EnumCategory;
 
-  @Column('timestamp')
+  @Column({ name: 'created_at', type: 'timestamp' })
   createdAt: Date;
 }
 

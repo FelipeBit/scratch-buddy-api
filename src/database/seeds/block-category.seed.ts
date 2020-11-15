@@ -12,7 +12,7 @@ const BlockCategorySeed = [
     color: 'pink',
   },
   {
-    description: 'events',
+    description: 'event',
     color: 'yellow',
   },
   {
@@ -24,15 +24,15 @@ const BlockCategorySeed = [
     color: 'aqua',
   },
   {
-    description: 'operators',
+    description: 'operator',
     color: 'green',
   },
   {
-    description: 'variables',
+    description: 'data',
     color: 'orange',
   },
   {
-    description: 'my blocks',
+    description: 'procedures',
     color: 'red',
   },
 ];

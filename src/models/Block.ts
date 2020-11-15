@@ -3,37 +3,37 @@ import {
   Column,
   PrimaryGeneratedColumn,
   OneToOne,
+  ManyToOne,
   JoinColumn,
 } from 'typeorm';
 
 import File from './File';
+import BlockCategory from './BlockCategory';
 
-@Entity({ name: 'static_tip' })
-class StaticTip {
+@Entity({ name: 'block' })
+class Block {
   @PrimaryGeneratedColumn('increment')
   id: number;
 
-  @Column({ name: 'description', type: 'varchar' })
-  description: string;
-
-  @Column({ name: 'text', type: 'mediumtext' })
-  text: string;
-
-  @Column({ name: 'markdown_text', type: 'mediumtext' })
-  markdownText: string;
-
-  @Column({ name: 'display_sequence', type: 'int' })
-  displaySequence: number;
+  @Column({ name: 'opcode', type: 'varchar' })
+  opcode: string;
 
   @Column({ name: 'file_id', type: 'int' })
   fileId: number;
+
+  @Column({ name: 'block_category_id', type: 'int' })
+  blockCategoryId: number;
 
   @OneToOne(() => File)
   @JoinColumn({ name: 'file_id' })
   file: File;
 
+  @ManyToOne(() => BlockCategory)
+  @JoinColumn({ name: 'block_category_id' })
+  BlockCategory: BlockCategory;
+
   @Column({ name: 'created_at', type: 'timestamp' })
   createdAt: Date;
 }
 
-export default StaticTip;
+export default Block;

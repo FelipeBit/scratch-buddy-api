@@ -5,10 +5,10 @@ import StaticTipsRepository from '../repositories/StaticTipsRepository';
 
 const staticTipsRouter = Router();
 
-staticTipsRouter.get('/', (request: Request, response: Response) => {
+staticTipsRouter.get('/', async (request: Request, response: Response) => {
   try {
     const staticTipsRepository = getCustomRepository(StaticTipsRepository);
-    const staticTips = staticTipsRepository.find();
+    const staticTips = await staticTipsRepository.find({ relations: ['file'] });
 
     return response.json(staticTips);
   } catch (err) {
