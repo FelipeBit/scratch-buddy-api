@@ -24,7 +24,8 @@ class Block {
   @Column({ name: 'block_category_id', type: 'int' })
   blockCategoryId: number;
 
-  @OneToOne(() => File)
+  // @OneToOne(() => File)
+  @ManyToOne(() => File)
   @JoinColumn({ name: 'file_id' })
   file: File;
 
