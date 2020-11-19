@@ -1,17 +1,22 @@
 const FileSeed = [
   {
     name: 'play.svg',
-    path: 'public/',
+    path: 'http://localhost:3333/images/',
     type: 'svg',
   },
   {
-    name: 'run.svg',
-    path: 'public/',
+    name: 'walk.svg',
+    path: 'http://localhost:3333/images/',
     type: 'svg',
   },
   {
     name: 'speak.svg',
-    path: 'public/',
+    path: 'http://localhost:3333/images/',
+    type: 'svg',
+  },
+  {
+    name: 'sound.svg',
+    path: 'http://localhost:3333/images/',
     type: 'svg',
   },
 ];

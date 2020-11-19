@@ -1,14 +1,13 @@
 const StaticTipSeed = [
   {
     description: 'start',
-    text: '',
-    markdownText:
-      'Para iniciar seu programa você deve ter uma peça de Evento (peças laranjas) no topo de seus  blocos. Tente a peça da imagem: ![image info](./pictures/image.png) Após  colocar a peça clique no bandeira verde! ![image info](./pictures/image.png)',
+    text: 'Teste um, dois, três',
+    markdownText: 'Para iniciar seu programa .... ',
     displaySequence: 1,
     fileId: 1,
   },
   {
-    description: 'run',
+    description: 'walk',
     text: '',
     markdownText:
       '*single asterisks* _single underscores_ **double asterisks** __double underscores__',
@@ -17,11 +16,19 @@ const StaticTipSeed = [
   },
   {
     description: 'speak',
-    text: '',
+    text: 'Ha ha ha',
     markdownText:
       '*single asterisks* _single underscores_ **double asterisks** __double underscores__',
     displaySequence: 3,
     fileId: 3,
+  },
+  {
+    description: 'sound',
+    text: 'Ui ui ui',
+    markdownText:
+      '*single asterisks* _single underscores_ **double asterisks** __double underscores__',
+    displaySequence: 4,
+    fileId: 4,
   },
 ];
 
