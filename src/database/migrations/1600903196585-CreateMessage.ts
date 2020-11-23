@@ -9,7 +9,7 @@ export default class CreateMessage1600903196585 implements MigrationInterface {
   public async up(queryRunner: QueryRunner): Promise<void> {
     await queryRunner.createTable(
       new Table({
-        name: 'message',
+        name: 'dynamic_tip',
         columns: [
           {
             name: 'id',
@@ -39,21 +39,21 @@ export default class CreateMessage1600903196585 implements MigrationInterface {
             isNullable: false,
           },
           {
-            name: 'repeat',
+            name: 'show',
             type: 'int',
             isNullable: false,
-            default: '0',
+            default: '1',
           },
           {
             name: 'type',
             type: 'enum',
-            enum: ['error', 'tip'],
+            enum: ['error', 'tip', 'intro', 'outside', 'top_block'],
             enumName: 'typeEnum',
           },
           {
             name: 'block_id',
             type: 'int',
-            isNullable: false,
+            isNullable: true,
           },
           {
             name: 'created_at',
@@ -64,24 +64,28 @@ export default class CreateMessage1600903196585 implements MigrationInterface {
       }),
     );
 
+    /*
     await queryRunner.createForeignKey(
-      'message',
+      'dynamic_tip',
       new TableForeignKey({
         columnNames: ['block_id'],
         referencedColumnNames: ['id'],
         referencedTableName: 'block',
-        onDelete: 'CASCADE',
+        // onDelete: 'CASCADE',
       }),
     );
+    */
   }
 
   public async down(queryRunner: QueryRunner): Promise<void> {
-    const table: any = await queryRunner.getTable('message');
+    /*
+    const table: any = await queryRunner.getTable('dynamic_tip');
     const foreignKey = table.foreignKeys.find(
       (fk: any) => fk.columnNames.indexOf('block_id') !== -1,
     );
-    await queryRunner.dropForeignKey('message', foreignKey);
+    await queryRunner.dropForeignKey('dynamic_tip', foreignKey);
+    */
 
-    await queryRunner.dropTable('message');
+    await queryRunner.dropTable('dynamic_tip');
   }
 }

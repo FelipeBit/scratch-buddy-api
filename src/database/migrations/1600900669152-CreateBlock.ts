@@ -48,7 +48,7 @@ export default class CreateBlock1600900669152 implements MigrationInterface {
         columnNames: ['file_id'],
         referencedColumnNames: ['id'],
         referencedTableName: 'file',
-        onDelete: 'CASCADE',
+        // onDelete: 'CASCADE',
       }),
     );
 
@@ -58,7 +58,7 @@ export default class CreateBlock1600900669152 implements MigrationInterface {
         columnNames: ['block_category_id'],
         referencedColumnNames: ['id'],
         referencedTableName: 'block_category',
-        onDelete: 'CASCADE',
+        // onDelete: 'CASCADE',
       }),
     );
   }

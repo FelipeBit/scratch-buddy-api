@@ -3,8 +3,8 @@ import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
 // eslint-disable-next-line no-shadow
 enum EnumCategory {
   blockImage = 'block_image',
-  tipImage = 'tip_image',
-  messageImage = 'message_image',
+  staticTipImage = 'static_tip_image',
+  dynamicTipImage = 'dynamic_tip_image',
 }
 
 @Entity({ name: 'file' })

@@ -60,7 +60,7 @@ export default class CreateStaticTip1600904132673
         columnNames: ['file_id'],
         referencedColumnNames: ['id'],
         referencedTableName: 'file',
-        onDelete: 'CASCADE',
+        // onDelete: 'CASCADE',
       }),
     );
   }

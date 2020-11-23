@@ -31,7 +31,7 @@ export default class CreateFile1600899051514 implements MigrationInterface {
           {
             name: 'file_category',
             type: 'enum',
-            enum: ['block_image', 'tip_image', 'message_image'],
+            enum: ['block_image', 'static_tip_image', 'dynamic_tip_image'],
             enumName: 'fileCategoryEnum',
           },
           {
