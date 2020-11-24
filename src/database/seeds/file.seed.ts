@@ -19,6 +19,16 @@ const FileSeed = [
     path: 'http://localhost:3333/images/',
     type: 'svg',
   },
+  {
+    name: 'costume.svg',
+    path: 'http://localhost:3333/images/',
+    type: 'svg',
+  },
+  {
+    name: 'scenario.svg',
+    path: 'http://localhost:3333/images/',
+    type: 'svg',
+  },
 ];
 
 export default FileSeed;
