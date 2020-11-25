@@ -2,12 +2,10 @@ import 'reflect-metadata';
 
 import express, { Request, Response } from 'express';
 import cors from 'cors';
+import compression from 'compression';
 import routes from './routes/index';
 
 import './database';
-
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-const compression = require('compression');
 
 const port = 3333;
 const app = express();

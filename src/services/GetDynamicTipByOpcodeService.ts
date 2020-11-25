@@ -1,4 +1,5 @@
 import { getCustomRepository } from 'typeorm';
+import ReadingTime from 'reading-time';
 import DynamicTip from '../models/DynamicTip';
 import Block from '../models/Block';
 import DynamicTipsRepository from '../repositories/DynamicTipsRepository';
@@ -10,6 +11,7 @@ interface Request {
 
 interface Response {
   opcode: string;
+  readingTime: number;
   dynamicTip: DynamicTip;
 }
 
@@ -36,8 +38,11 @@ class GetDynamicTipByOpcodeService {
       throw Error('Dica não encontrada!');
     }
 
+    const readingTime = ReadingTime(dynamicTipFounded.text);
+
     const response: Response = {
       opcode: blockFounded.opcode,
+      readingTime: readingTime.time * 1.5,
       dynamicTip: dynamicTipFounded,
     };
 
