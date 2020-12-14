@@ -19,48 +19,48 @@ var EnumType;
     EnumType["outside"] = "outside";
     EnumType["topBlock"] = "top_block";
 })(EnumType || (EnumType = {}));
-var BlockCategory = /** @class */ (function () {
-    function BlockCategory() {
+var DynamicTip = /** @class */ (function () {
+    function DynamicTip() {
     }
     __decorate([
         typeorm_1.PrimaryGeneratedColumn('increment'),
         __metadata("design:type", Number)
-    ], BlockCategory.prototype, "id", void 0);
+    ], DynamicTip.prototype, "id", void 0);
     __decorate([
         typeorm_1.Column({ name: 'text', type: 'mediumtext' }),
         __metadata("design:type", String)
-    ], BlockCategory.prototype, "text", void 0);
+    ], DynamicTip.prototype, "text", void 0);
     __decorate([
         typeorm_1.Column({ name: 'markdown_text', type: 'mediumtext' }),
         __metadata("design:type", String)
-    ], BlockCategory.prototype, "markdownText", void 0);
+    ], DynamicTip.prototype, "markdownText", void 0);
     __decorate([
         typeorm_1.Column({ name: 'seconds_until_display', type: 'int' }),
         __metadata("design:type", Number)
-    ], BlockCategory.prototype, "secondsUntilDisplay", void 0);
+    ], DynamicTip.prototype, "secondsUntilDisplay", void 0);
     __decorate([
         typeorm_1.Column({ name: 'seconds_displaying', type: 'int' }),
         __metadata("design:type", Number)
-    ], BlockCategory.prototype, "secondsDisplaying", void 0);
+    ], DynamicTip.prototype, "secondsDisplaying", void 0);
     __decorate([
         typeorm_1.Column({ name: 'show', type: 'int' }),
         __metadata("design:type", Number)
-    ], BlockCategory.prototype, "show", void 0);
+    ], DynamicTip.prototype, "show", void 0);
     __decorate([
         typeorm_1.Column({ name: 'type', type: 'text', default: 'tip' }),
         __metadata("design:type", String)
-    ], BlockCategory.prototype, "type", void 0);
+    ], DynamicTip.prototype, "type", void 0);
     __decorate([
         typeorm_1.Column({ name: 'block_id', type: 'int' }),
         __metadata("design:type", Number)
-    ], BlockCategory.prototype, "blockId", void 0);
+    ], DynamicTip.prototype, "blockId", void 0);
     __decorate([
         typeorm_1.Column({ name: 'created_at', type: 'timestamp' }),
         __metadata("design:type", Date)
-    ], BlockCategory.prototype, "createdAt", void 0);
-    BlockCategory = __decorate([
+    ], DynamicTip.prototype, "createdAt", void 0);
+    DynamicTip = __decorate([
         typeorm_1.Entity({ name: 'dynamic_tip' })
-    ], BlockCategory);
-    return BlockCategory;
+    ], DynamicTip);
+    return DynamicTip;
 }());
-exports.default = BlockCategory;
+exports.default = DynamicTip;

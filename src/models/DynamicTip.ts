@@ -17,7 +17,7 @@ enum EnumType {
 }
 
 @Entity({ name: 'dynamic_tip' })
-class BlockCategory {
+class DynamicTip {
   @PrimaryGeneratedColumn('increment')
   id: number;
 
@@ -51,4 +51,4 @@ class BlockCategory {
   createdAt: Date;
 }
 
-export default BlockCategory;
+export default DynamicTip;

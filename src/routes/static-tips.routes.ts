@@ -7,7 +7,6 @@ const staticTipsRouter = Router();
 
 staticTipsRouter.get('/', async (request: Request, response: Response) => {
   try {
-    return response.send('funciona');
     const staticTipsRepository = getCustomRepository(StaticTipsRepository);
     const staticTips = await staticTipsRepository.find({ relations: ['file'] });
 

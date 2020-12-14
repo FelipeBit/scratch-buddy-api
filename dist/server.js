@@ -9,7 +9,7 @@ var cors_1 = __importDefault(require("cors"));
 var compression_1 = __importDefault(require("compression"));
 var index_1 = __importDefault(require("./routes/index"));
 require("./database");
-var port = 3333;
+var port = 3000;
 var app = express_1.default();
 function shouldCompress(req, res) {
     if (req.headers['x-no-compression']) {

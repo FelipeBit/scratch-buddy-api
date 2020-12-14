@@ -7,7 +7,7 @@ import routes from './routes/index';
 
 import './database';
 
-const port = 3333;
+const port = 3000;
 const app = express();
 
 function shouldCompress(req: Request, res: Response) {
