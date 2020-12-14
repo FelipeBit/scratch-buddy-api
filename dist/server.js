@@ -7,6 +7,7 @@ require("reflect-metadata");
 var express_1 = __importDefault(require("express"));
 var cors_1 = __importDefault(require("cors"));
 var compression_1 = __importDefault(require("compression"));
+var path_1 = __importDefault(require("path"));
 var index_1 = __importDefault(require("./routes/index"));
 require("./database");
 var port = 3000;
@@ -22,7 +23,7 @@ function shouldCompress(req, res) {
 app.use(compression_1.default({ filter: shouldCompress }));
 app.use(cors_1.default());
 app.use(express_1.default.json());
-app.use(express_1.default.static(__dirname + "/public"));
+app.use('/public', express_1.default.static(path_1.default.join(__dirname, 'public')));
 app.use(index_1.default);
 app.use('/api', index_1.default);
-app.listen(port, function () { return console.log('online'); });
+app.listen(port, function () { return console.log('online', __dirname); });
