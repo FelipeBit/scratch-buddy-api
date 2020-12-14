@@ -25,8 +25,8 @@ app.use(compression({ filter: shouldCompress }));
 
 app.use(cors());
 app.use(express.json());
-app.use(express.static(path.join(__dirname, 'public', 'images')));
+app.use('/public', express.static(path.join(__dirname, 'public')));
 app.use(routes);
 app.use('/api', routes);
 
-app.listen(port, () => console.log('online'));
+app.listen(port, () => console.log('online', __dirname));
