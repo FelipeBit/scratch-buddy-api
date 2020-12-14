@@ -42,7 +42,7 @@ class GetDynamicTipByOpcodeService {
 
     const response: Response = {
       opcode: blockFounded.opcode,
-      readingTime: readingTime.time * 1.5,
+      readingTime: readingTime.time * 1.7,
       dynamicTip: dynamicTipFounded,
     };
 
