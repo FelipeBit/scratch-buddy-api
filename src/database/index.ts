@@ -1,6 +1,10 @@
 import { createConnection } from 'typeorm';
 
+import Block from '../models/Block';
+import BlockCategory from '../models/BlockCategory';
 import DynamicTip from '../models/DynamicTip';
+import File from '../models/File';
+import StaticTip from '../models/StaticTip';
 
 createConnection({
   type: 'mysql',
@@ -11,7 +15,7 @@ createConnection({
   database: 'databasesb',
   synchronize: true,
   logging: false,
-  entities: [DynamicTip],
+  entities: [Block, DynamicTip, BlockCategory, File, StaticTip],
   migrations: ['./src/database/migrations/*.ts'],
   cli: {
     migrationsDir: './src/database/migrations',
