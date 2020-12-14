@@ -12,7 +12,7 @@ interface Request {
 interface Response {
   opcode: string;
   readingTime: number;
-  dynamicTip: DynamicTip;
+  dynamicTip: any;
 }
 
 class GetDynamicTipByOpcodeService {
