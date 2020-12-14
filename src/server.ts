@@ -25,7 +25,7 @@ app.use(compression({ filter: shouldCompress }));
 
 app.use(cors());
 app.use(express.json());
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public', 'images')));
 app.use(routes);
 app.use('/api', routes);
 
