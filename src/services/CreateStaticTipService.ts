@@ -8,15 +8,15 @@ interface Request {
 }
 
 class CreateStaticTipService {
+  /*
   public async execute({ provider, date }: Request): Promise<StaticTip> {
     const staticTipsRepository = getCustomRepository(StaticTipsRepository);
 
-    // if () ... throw Error('Erro xxx')
     const staticTip = staticTipsRepository.create({ provider, date });
 
     await staticTipsRepository.save(staticTip);
 
     return staticTip;
-  }
+  } */
 }
 export default CreateStaticTipService;
