@@ -23,7 +23,7 @@ function shouldCompress(req, res) {
 app.use(compression_1.default({ filter: shouldCompress }));
 app.use(cors_1.default());
 app.use(express_1.default.json());
-app.use('/public', express_1.default.static(path_1.default.join(__dirname, 'public')));
+app.use('/public', express_1.default.static(path_1.default.join(__dirname, '../src', 'public')));
 app.use(index_1.default);
 app.use('/api', index_1.default);
-app.listen(port, function () { return console.log('online', __dirname); });
+app.listen(port, function () { return console.log('Server online!'); });
