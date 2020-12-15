@@ -29,4 +29,4 @@ app.use('/public', express.static(path.join(__dirname, '../src', 'public')));
 app.use(routes);
 app.use('/api', routes);
 
-app.listen(port, () => console.log('online', __dirname));
+app.listen(port, () => console.log('Server online!'));
